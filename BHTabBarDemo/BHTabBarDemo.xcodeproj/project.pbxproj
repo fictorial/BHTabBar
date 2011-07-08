@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		604C22BC13C622D800D39052 /* BHTabsFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 604C22BB13C622D800D39052 /* BHTabsFooterView.m */; };
+		605798D213C4C8A800D7494A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605798D113C4C8A800D7494A /* UIKit.framework */; };
+		605798D413C4C8A800D7494A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605798D313C4C8A800D7494A /* Foundation.framework */; };
+		605798D613C4C8A800D7494A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605798D513C4C8A800D7494A /* CoreGraphics.framework */; };
+		605798DC13C4C8A800D7494A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 605798DA13C4C8A800D7494A /* InfoPlist.strings */; };
+		605798DF13C4C8A800D7494A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 605798DE13C4C8A800D7494A /* main.m */; };
+		605798E213C4C8A800D7494A /* BHTabBarDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605798E113C4C8A800D7494A /* BHTabBarDemoAppDelegate.m */; };
+		605798E513C4C8A800D7494A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605798E313C4C8A800D7494A /* MainWindow.xib */; };
+		605798F013C4D40500D7494A /* BHTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605798ED13C4D40500D7494A /* BHTabsViewController.m */; };
+		605798F113C4D40500D7494A /* BHTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605798EF13C4D40500D7494A /* BHTabView.m */; };
+		6065447913C6B8CC00A14A88 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6065447813C6B8CC00A14A88 /* bg.jpg */; };
+		6092E07913C64F73004C03ED /* BHTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092E07813C64F72004C03ED /* BHTabStyle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		604C22BA13C622D800D39052 /* BHTabsFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BHTabsFooterView.h; sourceTree = "<group>"; };
+		604C22BB13C622D800D39052 /* BHTabsFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabsFooterView.m; sourceTree = "<group>"; };
+		605798CD13C4C8A800D7494A /* BHTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		605798D113C4C8A800D7494A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		605798D313C4C8A800D7494A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		605798D513C4C8A800D7494A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		605798D913C4C8A800D7494A /* BHTabBarDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BHTabBarDemo-Info.plist"; sourceTree = "<group>"; };
+		605798DB13C4C8A800D7494A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		605798DD13C4C8A800D7494A /* BHTabBarDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BHTabBarDemo-Prefix.pch"; sourceTree = "<group>"; };
+		605798DE13C4C8A800D7494A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		605798E013C4C8A800D7494A /* BHTabBarDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHTabBarDemoAppDelegate.h; sourceTree = "<group>"; };
+		605798E113C4C8A800D7494A /* BHTabBarDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHTabBarDemoAppDelegate.m; sourceTree = "<group>"; };
+		605798E413C4C8A800D7494A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		605798EC13C4D40500D7494A /* BHTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BHTabsViewController.h; sourceTree = "<group>"; };
+		605798ED13C4D40500D7494A /* BHTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabsViewController.m; sourceTree = "<group>"; };
+		605798EE13C4D40500D7494A /* BHTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabView.h; sourceTree = "<group>"; };
+		605798EF13C4D40500D7494A /* BHTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabView.m; sourceTree = "<group>"; };
+		6065447813C6B8CC00A14A88 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		6092E07713C64F72004C03ED /* BHTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabStyle.h; sourceTree = "<group>"; };
+		6092E07813C64F72004C03ED /* BHTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabStyle.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		605798CA13C4C8A800D7494A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605798D213C4C8A800D7494A /* UIKit.framework in Frameworks */,
+				605798D413C4C8A800D7494A /* Foundation.framework in Frameworks */,
+				605798D613C4C8A800D7494A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		605798C213C4C8A800D7494A = {
+			isa = PBXGroup;
+			children = (
+				605798EB13C4D40500D7494A /* Source */,
+				605798D713C4C8A800D7494A /* BHTabBarDemo */,
+				605798D013C4C8A800D7494A /* Frameworks */,
+				605798CE13C4C8A800D7494A /* Products */,
+				6065447813C6B8CC00A14A88 /* bg.jpg */,
+			);
+			sourceTree = "<group>";
+		};
+		605798CE13C4C8A800D7494A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				605798CD13C4C8A800D7494A /* BHTabBarDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		605798D013C4C8A800D7494A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				605798D113C4C8A800D7494A /* UIKit.framework */,
+				605798D313C4C8A800D7494A /* Foundation.framework */,
+				605798D513C4C8A800D7494A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		605798D713C4C8A800D7494A /* BHTabBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				605798E013C4C8A800D7494A /* BHTabBarDemoAppDelegate.h */,
+				605798E113C4C8A800D7494A /* BHTabBarDemoAppDelegate.m */,
+				605798E313C4C8A800D7494A /* MainWindow.xib */,
+				605798D813C4C8A800D7494A /* Supporting Files */,
+			);
+			path = BHTabBarDemo;
+			sourceTree = "<group>";
+		};
+		605798D813C4C8A800D7494A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				605798D913C4C8A800D7494A /* BHTabBarDemo-Info.plist */,
+				605798DA13C4C8A800D7494A /* InfoPlist.strings */,
+				605798DD13C4C8A800D7494A /* BHTabBarDemo-Prefix.pch */,
+				605798DE13C4C8A800D7494A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		605798EB13C4D40500D7494A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				605798EC13C4D40500D7494A /* BHTabsViewController.h */,
+				605798ED13C4D40500D7494A /* BHTabsViewController.m */,
+				605798EE13C4D40500D7494A /* BHTabView.h */,
+				605798EF13C4D40500D7494A /* BHTabView.m */,
+				604C22BA13C622D800D39052 /* BHTabsFooterView.h */,
+				604C22BB13C622D800D39052 /* BHTabsFooterView.m */,
+				6092E07713C64F72004C03ED /* BHTabStyle.h */,
+				6092E07813C64F72004C03ED /* BHTabStyle.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		605798CC13C4C8A800D7494A /* BHTabBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 605798E813C4C8A800D7494A /* Build configuration list for PBXNativeTarget "BHTabBarDemo" */;
+			buildPhases = (
+				605798C913C4C8A800D7494A /* Sources */,
+				605798CA13C4C8A800D7494A /* Frameworks */,
+				605798CB13C4C8A800D7494A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BHTabBarDemo;
+			productName = BHTabBarDemo;
+			productReference = 605798CD13C4C8A800D7494A /* BHTabBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		605798C413C4C8A800D7494A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 605798C713C4C8A800D7494A /* Build configuration list for PBXProject "BHTabBarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 605798C213C4C8A800D7494A;
+			productRefGroup = 605798CE13C4C8A800D7494A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				605798CC13C4C8A800D7494A /* BHTabBarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		605798CB13C4C8A800D7494A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605798DC13C4C8A800D7494A /* InfoPlist.strings in Resources */,
+				605798E513C4C8A800D7494A /* MainWindow.xib in Resources */,
+				6065447913C6B8CC00A14A88 /* bg.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		605798C913C4C8A800D7494A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605798DF13C4C8A800D7494A /* main.m in Sources */,
+				605798E213C4C8A800D7494A /* BHTabBarDemoAppDelegate.m in Sources */,
+				605798F013C4D40500D7494A /* BHTabsViewController.m in Sources */,
+				605798F113C4D40500D7494A /* BHTabView.m in Sources */,
+				604C22BC13C622D800D39052 /* BHTabsFooterView.m in Sources */,
+				6092E07913C64F73004C03ED /* BHTabStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		605798DA13C4C8A800D7494A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				605798DB13C4C8A800D7494A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		605798E313C4C8A800D7494A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				605798E413C4C8A800D7494A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		605798E613C4C8A800D7494A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		605798E713C4C8A800D7494A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		605798E913C4C8A800D7494A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHTabBarDemo/BHTabBarDemo-Prefix.pch";
+				INFOPLIST_FILE = "BHTabBarDemo/BHTabBarDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		605798EA13C4C8A800D7494A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHTabBarDemo/BHTabBarDemo-Prefix.pch";
+				INFOPLIST_FILE = "BHTabBarDemo/BHTabBarDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		605798C713C4C8A800D7494A /* Build configuration list for PBXProject "BHTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				605798E613C4C8A800D7494A /* Debug */,
+				605798E713C4C8A800D7494A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		605798E813C4C8A800D7494A /* Build configuration list for PBXNativeTarget "BHTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				605798E913C4C8A800D7494A /* Debug */,
+				605798EA13C4C8A800D7494A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 605798C413C4C8A800D7494A /* Project object */;
+}
