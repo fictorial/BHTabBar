@@ -1,8 +1,7 @@
-// TODO I think we might need to handle layoutSubviews too.
-
 #import "BHTabsViewController.h"
 #import "BHTabsFooterView.h"
 #import "BHTabStyle.h"
+#import "BHTabsView.h"
 
 enum { kTagTabBase = 100 };
 
@@ -10,17 +9,15 @@ enum { kTagTabBase = 100 };
 
 @property (nonatomic, retain) NSArray *viewControllers;
 @property (nonatomic, assign, readwrite) UIView *contentView;
-@property (nonatomic, retain) NSArray *tabViews;
-@property (nonatomic, retain) UIView *tabsContainerView;
+@property (nonatomic, retain) BHTabsView *tabsContainerView;
 @property (nonatomic, retain) BHTabsFooterView *footerView;
-@property (nonatomic, assign) NSUInteger tabWidth;
 
 @end
 
 @implementation BHTabsViewController
 
 @synthesize delegate, style, viewControllers, contentView,
-  tabViews, tabsContainerView, footerView, tabWidth;
+  tabsContainerView, footerView;
 
 - (id)initWithViewControllers:(NSArray *)theViewControllers
                         style:(BHTabStyle *)theStyle {
@@ -38,7 +35,6 @@ enum { kTagTabBase = 100 };
 - (void)dealloc {
   self.style = nil;
   self.viewControllers = nil;
-  self.tabViews = nil;
   self.tabsContainerView = nil;
   self.footerView = nil;
 
@@ -48,7 +44,7 @@ enum { kTagTabBase = 100 };
 - (void)_reconfigureTabs {
   NSUInteger thisIndex = 0;
 
-  for (BHTabView *aTabView in self.tabViews) {
+  for (BHTabView *aTabView in self.tabsContainerView.tabViews) {
     aTabView.style = self.style;
 
     if (thisIndex == currentTabIndex) {
@@ -58,7 +54,9 @@ enum { kTagTabBase = 100 };
       aTabView.selected = NO;
       [self.tabsContainerView sendSubviewToBack:aTabView];
     }
-
+    
+    aTabView.autoresizingMask = UIViewAutoresizingNone;
+    
     [aTabView setNeedsDisplay];
 
     ++thisIndex;
@@ -74,11 +72,10 @@ enum { kTagTabBase = 100 };
 
   [self.contentView removeFromSuperview];
   self.contentView = viewController.view;
-
-  self.contentView.frame = CGRectMake(0, self.tabsContainerView.frame.size.height,
-                                      self.view.frame.size.width,
-                                      self.view.frame.size.height - self.tabsContainerView.frame.size.height);
-
+  
+  self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+  self.contentView.frame = CGRectMake(0, self.tabsContainerView.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height);
+  
   [self.view addSubview:self.contentView];
 
   [self _reconfigureTabs];
@@ -107,20 +104,23 @@ enum { kTagTabBase = 100 };
   [view release];
 
   self.view.backgroundColor = [UIColor clearColor];
+  self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
   // The view that contains the tab views is located across the top.
 
   CGRect tabsViewFrame = CGRectMake(0, 0, frame.size.width, self.style.tabsViewHeight);
-  self.tabsContainerView = [[[UIView alloc] initWithFrame:tabsViewFrame] autorelease];
+  self.tabsContainerView = [[[BHTabsView alloc] initWithFrame:tabsViewFrame] autorelease];
   self.tabsContainerView.backgroundColor = [UIColor clearColor];
+  self.tabsContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+  self.tabsContainerView.style = self.style;
   [self.view addSubview:tabsContainerView];
 
   // Tabs are resized such that all fit in the view's width.
   // We position the tab views from left to right, with some overlapping after the first one.
 
-  self.tabWidth = frame.size.width / [self.viewControllers count];
-  NSUInteger overlap = self.tabWidth * self.style.overlapAsPercentageOfTabWidth;
-  self.tabWidth = (frame.size.width + overlap * ([self.viewControllers count] - 1)) / [self.viewControllers count];
+  CGFloat tabWidth = frame.size.width / [self.viewControllers count];
+  NSUInteger overlap = tabWidth * self.style.overlapAsPercentageOfTabWidth;
+  tabWidth = (frame.size.width + overlap * ([self.viewControllers count] - 1)) / [self.viewControllers count];
 
   NSMutableArray *allTabViews = [NSMutableArray arrayWithCapacity:[self.viewControllers count]];
 
@@ -129,9 +129,9 @@ enum { kTagTabBase = 100 };
 
     // The selected tab's bottom-most edge should overlap the top shadow of the tab bar under it.
 
-    CGRect tabFrame = CGRectMake(tabIndex * self.tabWidth,
+    CGRect tabFrame = CGRectMake(tabIndex * tabWidth,
                                  self.style.tabsViewHeight - self.style.tabHeight - self.style.tabBarHeight,
-                                 self.tabWidth,
+                                 tabWidth,
                                  self.style.tabHeight);
 
     if (tabIndex > 0)
@@ -146,7 +146,7 @@ enum { kTagTabBase = 100 };
     [allTabViews addObject:tabView];
   }
 
-  self.tabViews = allTabViews;
+  self.tabsContainerView.tabViews = allTabViews;
 
   CGRect footerFrame = CGRectMake(0, tabsViewFrame.size.height - self.style.tabBarHeight - self.style.shadowRadius,
                                   tabsViewFrame.size.width,
@@ -155,17 +155,16 @@ enum { kTagTabBase = 100 };
   self.footerView = [[[BHTabsFooterView alloc] initWithFrame:footerFrame] autorelease];
   self.footerView.backgroundColor = [UIColor clearColor];
   self.footerView.style = self.style;
+  self.footerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
   [self.tabsContainerView addSubview:footerView];
   [self.tabsContainerView bringSubviewToFront:footerView];
 
-  [self _makeTabViewCurrent:[self.tabViews objectAtIndex:0]];
+  [self _makeTabViewCurrent:[self.tabsContainerView.tabViews objectAtIndex:0]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return YES;
 }
-
-// TODO what do I need to do to handle orientation changes?
-// TODO I would think I just need to set the autoresizingMask on each BHTabView to flexibleWidth.
 
 @end

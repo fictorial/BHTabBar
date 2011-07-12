@@ -19,10 +19,11 @@
 		605798F113C4D40500D7494A /* BHTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605798EF13C4D40500D7494A /* BHTabView.m */; };
 		6065447913C6B8CC00A14A88 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6065447813C6B8CC00A14A88 /* bg.jpg */; };
 		6092E07913C64F73004C03ED /* BHTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092E07813C64F72004C03ED /* BHTabStyle.m */; };
+		60F48D6B13CC13AC00E42F17 /* BHTabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F48D6A13CC13AC00E42F17 /* BHTabsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		604C22BA13C622D800D39052 /* BHTabsFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BHTabsFooterView.h; sourceTree = "<group>"; };
+		604C22BA13C622D800D39052 /* BHTabsFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabsFooterView.h; sourceTree = "<group>"; };
 		604C22BB13C622D800D39052 /* BHTabsFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabsFooterView.m; sourceTree = "<group>"; };
 		605798CD13C4C8A800D7494A /* BHTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605798D113C4C8A800D7494A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -35,13 +36,15 @@
 		605798E013C4C8A800D7494A /* BHTabBarDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHTabBarDemoAppDelegate.h; sourceTree = "<group>"; };
 		605798E113C4C8A800D7494A /* BHTabBarDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHTabBarDemoAppDelegate.m; sourceTree = "<group>"; };
 		605798E413C4C8A800D7494A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		605798EC13C4D40500D7494A /* BHTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BHTabsViewController.h; sourceTree = "<group>"; };
+		605798EC13C4D40500D7494A /* BHTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabsViewController.h; sourceTree = "<group>"; };
 		605798ED13C4D40500D7494A /* BHTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabsViewController.m; sourceTree = "<group>"; };
 		605798EE13C4D40500D7494A /* BHTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabView.h; sourceTree = "<group>"; };
 		605798EF13C4D40500D7494A /* BHTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabView.m; sourceTree = "<group>"; };
 		6065447813C6B8CC00A14A88 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		6092E07713C64F72004C03ED /* BHTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabStyle.h; sourceTree = "<group>"; };
 		6092E07813C64F72004C03ED /* BHTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabStyle.m; sourceTree = "<group>"; };
+		60F48D6913CC13AC00E42F17 /* BHTabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTabsView.h; sourceTree = "<group>"; };
+		60F48D6A13CC13AC00E42F17 /* BHTabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTabsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				604C22BB13C622D800D39052 /* BHTabsFooterView.m */,
 				6092E07713C64F72004C03ED /* BHTabStyle.h */,
 				6092E07813C64F72004C03ED /* BHTabStyle.m */,
+				60F48D6913CC13AC00E42F17 /* BHTabsView.h */,
+				60F48D6A13CC13AC00E42F17 /* BHTabsView.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -191,6 +196,7 @@
 				605798F113C4D40500D7494A /* BHTabView.m in Sources */,
 				604C22BC13C622D800D39052 /* BHTabsFooterView.m in Sources */,
 				6092E07913C64F73004C03ED /* BHTabStyle.m in Sources */,
+				60F48D6B13CC13AC00E42F17 /* BHTabsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

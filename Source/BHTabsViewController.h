@@ -4,6 +4,7 @@
 @class BHTabsViewController;
 @class BHTabsFooterView;
 @class BHTabStyle;
+@class BHTabsView;
 
 @protocol BHTabsViewControllerDelegate <NSObject>
 @optional
@@ -19,13 +20,11 @@
 @end
 
 @interface BHTabsViewController : UIViewController <BHTabViewDelegate> {
-  NSArray *tabViews;
   NSArray *viewControllers;
   UIView *contentView;
-  UIView *tabsContainerView;
+  BHTabsView *tabsContainerView;
   BHTabsFooterView *footerView;
   BHTabStyle *tabStyle;
-  NSUInteger tabWidth;
   NSUInteger currentTabIndex;
   id <BHTabsViewControllerDelegate> delegate;
 }
