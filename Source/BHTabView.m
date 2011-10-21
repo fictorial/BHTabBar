@@ -96,8 +96,8 @@ static inline CGFloat radians(CGFloat degrees) {
 
 - (CGRect)_tabRect {
   CGFloat tabHeight = [self _gridSize].height * kTabHeightInGridUnits;
-  return CGRectMake(0, self.frame.size.height - tabHeight + 0.5,
-                    self.frame.size.width - 0.5, tabHeight);
+  return CGRectMake(0, self.frame.size.height - tabHeight + 1,
+                    self.frame.size.width - 1, tabHeight);
 }
 
 - (CGMutablePathRef)_makeTabPath {
