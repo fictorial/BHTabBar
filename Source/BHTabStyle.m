@@ -22,9 +22,9 @@
   if ((self = [super init])) {
     self.tabsViewHeight = 50;
     self.tabHeight = 40;
-    self.tabBarHeight = 5;
+    self.tabBarHeight = 2;
     self.overlapAsPercentageOfTabWidth = 0.20;
-    self.shadowRadius = 3;
+    self.shadowRadius = 1;
 
     self.selectedTabColor = [UIColor colorWithWhite:220/255.0 alpha:1];
     self.selectedTitleFont = [UIFont boldSystemFontOfSize:14];
