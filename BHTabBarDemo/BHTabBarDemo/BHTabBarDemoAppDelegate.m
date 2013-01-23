@@ -15,10 +15,6 @@
   viewController = [[BHTabsViewController alloc] 
                     initWithViewControllers:vcs
                     style:[BHTabStyle defaultStyle]];
-
-  UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
-  iv.frame = self.window.frame;
-  [self.window addSubview:iv];
   
   [self.window addSubview:viewController.view];
   [self.window makeKeyAndVisible];

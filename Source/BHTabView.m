@@ -96,8 +96,8 @@ static inline CGFloat radians(CGFloat degrees) {
 
 - (CGRect)_tabRect {
   CGFloat tabHeight = [self _gridSize].height * kTabHeightInGridUnits;
-  return CGRectMake(0, self.frame.size.height - tabHeight + 0.5,
-                    self.frame.size.width - 0.5, tabHeight);
+  return CGRectMake(0, self.frame.size.height - tabHeight + 1,
+                    self.frame.size.width - 1, tabHeight);
 }
 
 - (CGMutablePathRef)_makeTabPath {
@@ -138,24 +138,9 @@ static inline CGFloat radians(CGFloat degrees) {
 
   CGContextRef context = UIGraphicsGetCurrentContext();
 
-  // Configure a linear gradient which adds a simple white highlight on the top.
-
-  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-  CGFloat locations[] = { 0.0, 0.4 };
-
   CGColorRef tabColor = (self.selected
                          ? self.style.selectedTabColor.CGColor
                          : self.style.unselectedTabColor.CGColor);
-
-  CGColorRef startColor = [UIColor whiteColor].CGColor;
-  CGColorRef endColor   = tabColor;
-  NSArray    *colors    = [NSArray arrayWithObjects:(id)startColor, (id)endColor, nil];
-
-  CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)colors, locations);
-
-  CGRect  tabRect    = [self _tabRect];
-  CGPoint startPoint = CGPointMake(CGRectGetMidX(tabRect), tabRect.origin.y);
-  CGPoint endPoint   = CGPointMake(CGRectGetMidX(tabRect), tabRect.origin.y + tabRect.size.height);
 
   // Fill with current tab color
 
@@ -165,16 +150,6 @@ static inline CGFloat radians(CGFloat degrees) {
   CGContextSetShadow(context, CGSizeMake(0, -1), self.style.shadowRadius);
   CGContextFillPath(context);
   CGContextRestoreGState(context);
-
-  // Render the interior of the tab path using the gradient.
-
-  CGContextSaveGState(context);
-  CGContextAddPath(context, path);
-  CGContextClip(context);
-  CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
-  CGContextRestoreGState(context);
-  CGGradientRelease(gradient);
-  CGColorSpaceRelease(colorSpace);
 
   CFRelease(path);
 
